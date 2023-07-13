@@ -1,4 +1,4 @@
-import { Ticket } from "@prisma/client";
+import { Payment, Ticket } from "@prisma/client";
 
 export type ApplicationError = {
   name: string;
@@ -48,3 +48,13 @@ export type RequestError = {
 };
 
 export type CreateTicket = Omit<Ticket, "id" | "createdAt" | "updatedAt">;
+
+export type CreatePayment = Omit<Payment, "id" | "createdAt" | "updatedAt">;
+
+export type CardPaymentParams = {
+  issuer: string;
+  number: number;
+  name: string;
+  expirationDate: Date;
+  cvv: number;
+}
