@@ -1,7 +1,7 @@
 import { notFoundError } from "@/errors";
 import { CreateTicket } from "@/protocols";
 import enrollmentRepository from "@/repositories/enrollment-repository";
-import ticketRepository from "@/repositories/tickets-repository";
+import ticketRepository from "@/repositories/ticket-repository";
 import { Ticket, TicketStatus, TicketType } from "@prisma/client";
 
 async function getTicketByUser(userId: number): Promise<Ticket> {
